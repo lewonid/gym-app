@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../assets/fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('../assets/fonts/Inter-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('../assets/fonts/Inter-Bold.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    background-color: #F9FBFF;
+    min-height: 600px;
+}
+
+.App{
+    width: 100%;
+    height: 100vh;
+    padding-top: 1rem;
+}
+
+/* Navbar */
+
+.Navbar{
+    display: flex;
+    margin: 0 6rem;
+    height: 80px;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.Navbar img{
+    width:auto;
+    height: 78px;
+}
+
+.NavLinks{
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    margin-left: 10rem;
+}
+.HamburgerMenuMobile{
+    display: none;
+    cursor: pointer;
+}
+.navLink{
+    font-family: 'Inter-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1B262C;
+}
+
+.active{
+    width: auto;
+    height: 3px;
+    background-color: #0087ca;
+    margin-top: 2px;
+}
+.Mobile-Menu-Buttons{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-1000px);
+    background-color: #d0eafff3;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter-Bold';
+    font-size: 2rem;
+    color: #1B262C;
+}
+
+.mobile-close-button{
+    align-self: flex-end;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.Mobile-Menu-Buttons h3{
+    margin: 2rem auto;
+    
+    
+}
+
+.active-menu{
+    transform: translateY(-16px);
+}
+
+/* Home */
+
+.Home{
+    /* background-color: bisque; */
+    height: calc(100vh - 96px);
+    margin-left: 21rem;
+    display:flex;
+    max-width: 2000px;
+}
+
+.Hero-Text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.Hero-Text h4{
+    font-family: 'Inter-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #3282B8;
+    margin-bottom: 30px;
+}
+
+.Hero-Text h1{
+    font-family: 'Inter-Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 67px;
+    line-height: 81px;
+    color: #1B262C;
+    margin-bottom: 30px;
+}
+
+.Hero-Text p{
+    font-family: 'Inter-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.Hero-Text button{
+    width: 211px;
+    height: 49px;
+    background: #3282B8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: white;
+    font-family: 'Inter-Regular';
+    font-size: 1.25rem;
+}
+
+.HeroBg{
+    background-image: url('/src/assets/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: calc(100vh - 100px);
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 100px;
+}
+
+/* Media screens */
+
+
+/* 1600px breakdown */
+
+@media screen and (max-width: 1600px) {
+    .Home{
+        margin-left: 6rem;
+    }
+    .HeroBg{
+        width: 420px;
+    }
+  }
+
+/* 1200px */
+
+@media screen and (max-width: 1200px) {
+    .Home{
+        margin-right: 6rem;
+    }
+    .HeroBg{
+        margin-top: 80px;
+        height: calc(100vh - 280px);
+    }
+  }
+
+  /* 810px */
+
+@media screen and (max-width: 810px) {
+    .Navbar{
+        margin: 0 2rem;
+    }
+    .NavLinks{
+        margin-left: 3rem;
+        width: 75%;
+    }
+    .Home{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .Hero-Text h4{
+        font-size: 18px;
+    }
+    
+    .Hero-Text h1{
+        font-size: 50px;
+        line-height: 3.25rem;
+    }
+    
+    .Hero-Text p{
+        font-size: 16px;
+    }
+    
+    .Hero-Text button{
+        font-size: 1rem;
+    }
+    .HeroBg{
+        margin: auto;
+        height: calc(100vh - 400px);
+    }
+}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+    .NavLinks{
+        width:  fit-content;
+        margin-left: auto;
+    }
+    .navLink{
+        display: none;
+    }
+    .HamburgerMenuMobile{
+        color: #1B262C;
+        display: block;
+    }
+    .Home{
+        background-image: url('/src/assets/images/bg-mobile2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+    .HeroBg{
+        display: none;
+    }
+    .Hero-Text{
+        margin: 0 2rem;
+    }
+}
+
+/* if lower than 600px in height */
+
+@media screen and (max-height: 600px){
+    .Home{
+        height: fit-content;
+        margin-top: 2rem;
+    }
+    .Hero-Text{
+        justify-content: flex-start;
+    }
+    .HeroBg{
+        height: 70vh;
+    }
+}
