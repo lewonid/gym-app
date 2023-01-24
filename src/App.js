@@ -1,6 +1,7 @@
 // import { Route, Routes} from 'react-router-dom';
 // import { Box } from '@mui/material'
 
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import ExerciseDetail from './pages/ExerciseDetail';
@@ -14,10 +15,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/exercise/:id" element={<ExerciseDetail />} />
         </Routes> */}
-        <Home></Home>
+        {/* <Home></Home> */}
         {/* 
         <ExerciseDetail></ExerciseDetail>
         <Footer />   */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/exercises' element={<ExerciseDetail />} />
+        </Routes>
     </div>
   );
 }

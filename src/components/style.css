@@ -43,6 +43,7 @@
 .Navbar img{
     width:auto;
     height: 78px;
+    cursor: pointer;
 }
 
 .NavLinks{
@@ -62,8 +63,14 @@
     font-size: 18px;
     line-height: 24px;
     color: #1B262C;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: none;
 }
-
+.navLink:hover{
+    color:#3282B8;
+    transform: scale(1.03);
+}
 .active{
     width: auto;
     height: 3px;
@@ -74,7 +81,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    transform: translateY(-1000px);
+    transform: translateY(-2000px);
     background-color: #d0eafff3;
     transition: 1s;
     display: flex;
@@ -265,12 +272,15 @@
 
 @media screen and (max-height: 600px){
     .Home{
+        height: 600px;
+        /* height: fit-content; before line 268 update */
         height: fit-content;
         margin-top: 2rem;
     }
-    .Hero-Text{
+    /* .Hero-Text{
         justify-content: flex-start;
-    }
+        before line 268 update
+    } */
     .HeroBg{
         height: 70vh;
     }
