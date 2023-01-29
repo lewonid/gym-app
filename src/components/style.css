@@ -22,11 +22,12 @@
 #root{
     background-color: #F9FBFF;
     min-height: 600px;
+    min-width: 370px;
 }
 
 .App{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     padding-top: 1rem;
 }
 
@@ -97,16 +98,15 @@
     margin-top: 1rem;
     cursor: pointer;
 }
-
-.Mobile-Menu-Buttons h3{
-    margin: 2rem auto;
-    
-    
-}
-
 .active-menu{
     transform: translateY(-16px);
 }
+.mobile-button{
+    margin: 2rem auto;
+    text-decoration: none;
+    color: black;
+}
+
 
 /* Home */
 
@@ -163,6 +163,7 @@
     color: white;
     font-family: 'Inter-Regular';
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 .HeroBg{
@@ -178,18 +179,181 @@
     border-bottom-left-radius: 100px;
 }
 
+/* Home second */
+
+.SeparatorWrapper{
+    width: 100%;
+    height: 220px;
+    background-color: #1B262C;
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.separatorItem{
+    display: flex;
+    align-items: center;
+}
+
+.sep-upper{
+    font-family: 'Inter-SemiBold';
+    font-size: 2rem;
+}
+.sep-icon{
+    /* margin-right: 1rem; */
+    font-size: 1.8rem;
+}
+.sl{
+    font-size: 1.5rem;
+}
+.sep-lower{
+    font-family: 'Inter-SemiBold';
+    font-size: 1.25rem;
+}
+.v-line{
+    width: 1px;
+    height: 6rem;
+    background-color: white;
+    margin-left: 2rem;
+}
+.Introduction{
+    display: flex;
+    margin-left: 21rem;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+.leftIntroduction h1{
+    font-family: "Inter-Bold";
+    font-size: 2.25rem;
+    color: #1B262C;
+}
+.IntroductionText{
+    font-family: "Inter-Regular";
+    font-size: 20px;
+    margin-top: 3rem;
+    color: #1B262C;
+}
+.IntroductionBox:first-of-type{
+    margin-top: 4rem;
+}
+.IntroductionBox{
+    display: flex;
+    margin-top: 2rem;
+}
+.circleBackground{
+    background-color: #1B262C;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-icon{
+    color: white;
+    font-size: 3.5rem;
+    margin-top: 13px;
+}
+.BoxText{
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.BoxText h2{
+    color: #1B262C;
+    font-family: "Inter-Bold";
+}
+.BoxText p{
+    color: #1B262C;
+    font-family: "Inter-Regular";
+}
+.rightIntroduction{
+    margin-right: 200px;
+    margin-left: 100px;
+    margin-top: 60px;
+}
+
+.introduction-img{
+    background-image: url('/src/assets/images/introduction-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 570px;
+    border-radius: 100px;
+}
+.leftIntroduction button{
+    width: 211px;
+    height: 49px;
+    background: #3282B8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: white;
+    font-family: 'Inter-Regular';
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: 4rem;
+}
+/* Footer */
+
+.FooterWrapper{
+    background-color: #0A0E10;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+}
+.FooterContainer{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1480px;
+    width: 100%;
+    margin-top: 5rem;
+}
+.FooterColumn img{
+    width:auto;
+    height: 124px;
+    cursor: pointer;
+}
+.FooterColumn h3{
+    font-family: 'Inter-Bold';
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+.h-line{
+    width: 4rem;
+    height: 2px;
+    background-color: #3282B8;
+    margin-bottom: 2.5rem;
+}
+.FooterColumn p{
+    font-family: 'Inter-Regular';
+    color: #b9b9b9;
+    margin-bottom: 1rem;
+}
+.FooterCopyright{
+    font-family: 'Inter-Regular';
+    color: #b9b9b9;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 /* Media screens */
 
 
 /* 1600px breakdown */
 
 @media screen and (max-width: 1600px) {
-    .Home{
+    .Home, .Introduction{
         margin-left: 6rem;
     }
-    .HeroBg{
+    .HeroBg, .introduction-img{
         width: 420px;
     }
+    .rightIntroduction{margin-right: 120px;}
   }
 
 /* 1200px */
@@ -201,6 +365,19 @@
     .HeroBg{
         margin-top: 80px;
         height: calc(100vh - 280px);
+    }
+    .Introduction{
+        margin-left: 3rem;
+    }
+    .rightIntroduction{
+        margin-right: 3rem;
+        margin-left: 3rem;
+        margin-top: auto;
+    }
+    .introduction-img{
+        width: 320px;
+        height: 740px;
+        border-radius: 60px;
     }
   }
 
@@ -217,6 +394,28 @@
     .Home{
         margin-left: 2rem;
         margin-right: 2rem;
+    }
+    .SeparatorWrapper{
+        height: 140px;
+    }
+    .sep-upper{
+        font-size: 1.24rem;
+    }
+    .sep-icon{
+        font-size: 1.11rem;
+    }
+    .sl{
+        font-size: 0.93rem;
+    }
+    .sep-lower{
+        font-size: 0.77rem;
+    }
+    .v-line{
+        height: 3.72rem;
+        margin-left: 1rem;
+    }
+    .Introduction{
+        margin-left: 2rem;
     }
     .Hero-Text h4{
         font-size: 18px;
@@ -237,6 +436,70 @@
     .HeroBg{
         margin: auto;
         height: calc(100vh - 400px);
+    }
+    .leftIntroduction h1{
+        font-size: 1.75rem;
+    }
+    .IntroductionText{
+        font-size: 16px;
+    }
+    .circleBackground{
+        height: 60px;
+        width: 60px;
+    }
+    .box-icon{
+       font-size: 2.63rem;
+    }
+    .BoxText h2{
+        font-size: 1.1rem;
+    }
+    .BoxText{
+        margin-left: 1.25rem;
+    }
+    .rightIntroduction{
+        margin-right: 2rem;
+    }
+    .introduction-img{
+        width: 200px;
+        height: 700px;
+    }
+    .Introduction button{
+        font-size: 1rem;
+    }
+    .FooterWrapper{
+        height: auto;
+    }
+    .FooterContainer{
+        margin-top: 4.24rem;
+        flex-wrap: wrap;
+        justify-content: normal;
+    }
+    .FooterColumn{
+        margin-right: 4rem;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+    .FooterColumn:last-of-type{
+        margin-left: 13rem;
+    }
+    .FooterColumn img{
+        height: 78px;
+    }
+    .FooterColumn h3{
+        font-size: 18px;
+    }
+    .h-line{
+        width: 2rem;
+        margin-bottom: 2rem;
+    }
+    .FooterColumn p{
+        margin-bottom: 0.8rem;
+    }
+}
+
+@media screen and (max-width:650px){
+    .FooterColumn:nth-of-type(3){
+        margin-left: 13rem;
     }
 }
 
@@ -266,6 +529,22 @@
     .Hero-Text{
         margin: 0 2rem;
     }
+    .Introduction{
+        background-image: url('/src/assets/images/introduction-mobile.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+    .leftIntroduction{
+        margin-top: 4.5rem;
+        margin-bottom: 4.5rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .rightIntroduction{
+        display: none;
+    }
 }
 
 /* if lower than 600px in height */
@@ -283,5 +562,21 @@
     } */
     .HeroBg{
         height: 70vh;
+    }
+    .SeparatorWrapper
+    {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .FooterColumn{
+        margin-right: 1rem;
+    }
+    .FooterColumn:nth-of-type(3){
+        margin-left: 10rem;
+    }
+    .FooterColumn:last-of-type{
+        margin-left: 10rem;
     }
 }

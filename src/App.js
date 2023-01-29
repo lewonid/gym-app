@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import ExerciseDetail from './pages/ExerciseDetail';
 import Footer from './components/Footer';
+import './components/style.css'
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/exercises' element={<ExerciseDetail />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer />
     </div>
   );
 }
