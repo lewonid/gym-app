@@ -70,6 +70,7 @@ const Home = () => {
       </div>
       <div className="Introduction">
         <div className="leftIntroduction">
+          <div className="h-line"></div>
           <h1>Welcome to Monster Gym</h1>
           <p className="IntroductionText">Over 10 years of experience with 6 Monster Gym centers. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquam augue tellus, vel luctus augue dapibus in. Praesent eleifend viverra nunc ac eleifend. Proin molestie odio in imperdiet convallis. Proin in volutpat est. Sed ultricies vitae justo quis aliquam. Nulla pulvinar neque ultricies ante faucibus suscipit. Sed id lobortis ligula.</p>
           <p className="IntroductionText">Train better and be the best version of yourself!</p>
