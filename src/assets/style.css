@@ -89,7 +89,7 @@
     transform: scale(1.03);
 }
 
-.active {
+.active .activated {
     width: auto;
     height: 3px;
     background-color: #0087ca;
@@ -129,20 +129,45 @@
 }
 
 
+/* COMMON */
+.CommonContainer{
+    height: calc(100vh - 96px);
+    margin-left: 21rem;
+    display: flex;
+    max-width: 2000px;
+}
+.CommonHero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 570px;
+    height: calc(100vh - 100px);
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-left-radius: 100px;
+}
+h1{
+    font-family: 'Inter-Bold';
+    color: #1B262C;
+}
+p{
+    color: #1B262C;
+    font-family: "Inter-Regular";
+}
 /* Home */
 
 .HomeWrapper {
     padding-top: 96px;
     /* needed to hold the empty space that comes from the position: fixed at NavBar */
 }
-
+/* 
 .Home {
-    /* background-color: bisque; */
     height: calc(100vh - 96px);
     margin-left: 21rem;
     display: flex;
     max-width: 2000px;
-}
+} */
 
 .Hero-Text {
     display: flex;
@@ -161,12 +186,10 @@
 }
 
 .Hero-Text h1 {
-    font-family: 'Inter-Bold';
     font-style: normal;
     font-weight: 700;
     font-size: 67px;
     line-height: 81px;
-    color: #1B262C;
     margin-bottom: 30px;
 }
 
@@ -192,17 +215,8 @@
     cursor: pointer;
 }
 
-.HeroBg {
+.HomeHeroBg {
     background-image: url('/src/assets/images/bg.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 570px;
-    height: calc(100vh - 100px);
-    margin-top: -100px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom-left-radius: 100px;
 }
 
 /* Home second */
@@ -304,11 +318,6 @@
     font-family: "Inter-Bold";
 }
 
-.BoxText p {
-    color: #1B262C;
-    font-family: "Inter-Regular";
-}
-
 .rightIntroduction {
     margin-right: 200px;
     margin-left: 100px;
@@ -392,11 +401,27 @@
 }
 
 /* Exercise Detail page */
-.ExerciseDetailWrapper {
-    height: 1000px;
+.ExercisesWrapper{
     padding-top: 96px;
     /* needed to hold the empty space that comes from the position: fixed at NavBar */
 }
+.ExercisesHeroBg {
+    background-image: url('/src/assets/images/exercises-bg.webp');
+}
+.ExercisesText{
+    margin-top: 6rem;
+}
+.ExercisesText h1{
+    font-size: 2.5rem;
+}
+.ExercisesText p{
+    margin-top: 2rem;
+    margin-right: 1rem;
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 140%;
+}
+.ExercisesText p:nth-of-type(3){text-decoration:line-through;}
 
 /* Media screens */
 
@@ -405,12 +430,12 @@
 
 @media screen and (max-width: 1600px) {
 
-    .Home,
+    .CommonContainer,
     .Introduction {
         margin-left: 6rem;
     }
 
-    .HeroBg,
+    .CommonHero,
     .introduction-img {
         width: 420px;
     }
@@ -423,15 +448,15 @@
 /* 1200px */
 
 @media screen and (max-width: 1200px) {
-    .Home {
+    .CommonContainer {
         margin-right: 6rem;
     }
 
-    .HeroBg {
+    .CommonHero {
         margin-top: 80px;
         height: calc(100vh - 280px);
     }
-
+    .ExercisesHeroBg{display: none}
     .Introduction {
         margin-left: 3rem;
     }
@@ -461,7 +486,7 @@
         width: 75%;
     }
 
-    .Home {
+    .CommonContainer {
         margin-left: 2rem;
         margin-right: 2rem;
     }
@@ -512,7 +537,7 @@
         font-size: 1rem;
     }
 
-    .HeroBg {
+    .CommonHero {
         margin: auto;
         height: calc(100vh - 400px);
     }
@@ -554,7 +579,8 @@
     .Introduction button {
         font-size: 1rem;
     }
-
+    .ExercisesText h1{font-size: 1.75rem;}
+    .ExercisesText p{font-size: 16px;}
     .FooterWrapper {
         height: auto;
     }
@@ -623,7 +649,7 @@
         margin: 0;
     }
 
-    .HeroBg {
+    .CommonHero {
         display: none;
     }
 
@@ -649,12 +675,13 @@
     .rightIntroduction {
         display: none;
     }
+    .ExercisesText{margin-top: 2rem;}
 }
 
 /* if lower than 600px in height */
 
 @media screen and (max-height: 600px) {
-    .Home {
+    .CommonContainer {
         height: 600px;
         /* height: fit-content; before line 268 update */
         height: fit-content;
@@ -665,7 +692,7 @@
         justify-content: flex-start;
         before line 268 update
     } */
-    .HeroBg {
+    .CommonHero {
         height: 70vh;
     }
 
