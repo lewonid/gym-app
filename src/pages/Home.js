@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ExerciseDetail from "./ExerciseDetail";
+import ExerciseDetail from "./Exercises";
 import { FaChalkboardTeacher } from "react-icons/fa"
 import { FaHandHoldingHeart } from "react-icons/fa"
 import { SlDiamond } from "react-icons/sl"
@@ -21,7 +21,7 @@ const Home = () => {
   }, []);
   return (
     <div className="HomeWrapper">
-      <div className="Home">
+      <div className="CommonContainer Home">
         <div className="Hero-Text">
           <h4>Monster Gym Club</h4>
           <h1>
@@ -37,7 +37,7 @@ const Home = () => {
             <button>Explore Exercises</button>
           </Link>
         </div>
-        <div className="HeroBg"></div>
+        <div className="CommonHero HomeHeroBg"></div>
       </div>
       <div className="SeparatorWrapper">
         <div className="separatorItem">

@@ -2,7 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
-import ExerciseDetail from './pages/ExerciseDetail';
+import Exercises from './pages/Exercises';
 import Footer from './components/Footer';
 import './assets/style.css'
 import Contact from './pages/Contact';
@@ -14,16 +14,16 @@ function App() {
       <Navbar />
       {/* <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/exercise/:id" element={<ExerciseDetail />} />
+          <Route path="/exercise/:id" element={<Exercises />} />
         </Routes> */}
       {/* <Home></Home> */}
       {/* 
-        <ExerciseDetail></ExerciseDetail>
+        <Exercises></Exercises>
         <Footer />   */}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/exercises' element={<ExerciseDetail />} />
+        <Route path='/exercises' element={<Exercises />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
