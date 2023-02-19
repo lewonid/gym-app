@@ -6,11 +6,12 @@ const Exercises = () => {
   const [search, setSearch] = useState('');
   const [exercises, setExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
+  const [bodyPart, setBodyPart] = useState('all');
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      // const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-      const bodyPartsData = await fetchData('https://some-random-api.ml/animal/cat', exerciseOptions);
+      const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
+      // const bodyPartsData = await fetchData('https://some-random-api.ml/animal/cat', exerciseOptions);
 
       setBodyParts(['all', ...bodyPartsData]);
     }
@@ -31,7 +32,7 @@ const Exercises = () => {
         || exercise.bodyPart.toLowerCase().includes(search)
       )
       setSearch('');
-      setExercises(searchedExercises)
+      setExercises(searchedExercises);
     };
   }
 
@@ -49,18 +50,20 @@ const Exercises = () => {
         </div>
         <div className="CommonHero ExercisesHeroBg"></div>
       </div>
-      {/* <form id='form'>
-        <input
-         type="text"
-         value={search}
-         placeholder="Shit"
-         onChange={e => setSearch(e.target.value.toLowerCase())}
-         />
-         <button onClick={handleSearch} type='button'>
-        Search
-      </button>
-      </form>
-      <HorizontalScrollbar data = { bodyParts } /> */}
+      <div className='ExercisesContent'>
+        <form id='form'>
+            <input
+            type="text"
+            value={search}
+            placeholder="Search Exercises"
+            onChange={e => setSearch(e.target.value.toLowerCase())}
+            />
+            <button onClick={handleSearch} type='button'>
+            Search
+          </button>
+          </form>
+        <HorizontalScrollbar data = { bodyParts } bodyPart = {bodyPart} setBodyPart={setBodyPart} />
+      </div>
     </div>
   )
 }
