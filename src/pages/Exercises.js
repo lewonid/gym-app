@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import HorizontalScrollbar from '../components/HorizontalScrollbar';
+import ExercisesList from '../components/ExercisesList';
 import { fetchData, exerciseOptions } from '../utils/fetchData'
+
 
 const Exercises = () => {
   const [search, setSearch] = useState('');
@@ -19,13 +21,10 @@ const Exercises = () => {
     fetchExercisesData();
   }, [])
 
-  const handleBodyPart = (bodyPart) => {
-    setBodyPart(bodyPart);
-  };
   const handleSearch = async () => {
     if (search) {
-      // const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-      const exercisesData = await fetchData('https://some-random-api.ml/animal/cat', exerciseOptions);
+      const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      // const exercisesData = await fetchData('https://some-random-api.ml/animal/cat', exerciseOptions);
 
       const searchedExercises = exercisesData.filter(
         (exercise) => exercise.name.toLowerCase().includes(search)
@@ -37,6 +36,21 @@ const Exercises = () => {
       setExercises(searchedExercises);
     };
   }
+
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      let exercisesData = [];
+
+      if(bodyPart === 'all'){
+        exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+      } else {
+        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+      }
+      setExercises(exercisesData);
+    }
+    fetchExercisesData();
+  }, [bodyPart])
+  
 
   return (
     <div className='ExercisesWrapper'>
@@ -65,6 +79,8 @@ const Exercises = () => {
           </button>
         </form>
         <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        <ExercisesList exercises={exercises} setExercises={setExercises} bodyPart={bodyPart} />
+       
       </div>
     </div>
   )

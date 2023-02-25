@@ -14,7 +14,7 @@ const Navbar = () => {
   const desktopNavDiv = navRef.current;
   const scrollPosition = useScrollPosition()
 
-  if (scrollPosition > 100){
+  if (scrollPosition > 10){
     if (desktopNavDiv.className !== "scrolled-navbar-class"){
       desktopNavDiv.className = "scrolled-navbar-class";
       // console.log("added")
@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
       <div ref={navRef} id='Desktop-Buttons' className='Desktop-Buttons'>
         <div className='Navbar'>
-          <img src={logo} alt='gym logo'></img>
+          <NavLink to='/' element={<Home />}><img src={logo} alt='gym logo'></img> </NavLink>
           <div className='NavLinks'>
             <h1 onClick={mobileMenu} className='HamburgerMenuMobile'><RxHamburgerMenu /></h1>
             {/* <Link style={{textDecoration: 'none'}} to="/" element={<Home />}><h3 className='navLink'>Home<div className='active'></div></h3> </Link>

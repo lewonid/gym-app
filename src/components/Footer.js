@@ -12,9 +12,9 @@ const Footer = () => {
           <h3>Locations</h3>
           <div className='h-line'></div>
           <p>Monster Gym 1 NY</p>
-          <p>Monster Gym 1 NY</p>
-          <p>Monster Gym 1 NY</p>
-          <p>Monster Gym 1 NY</p>
+          <p>Monster Gym 2 UK</p>
+          <p>Monster Gym 3 RO</p>
+          <p>Monster Gym 4 BG</p>
         </div>
         <div className='FooterColumn'>
           <h3>Tools</h3>

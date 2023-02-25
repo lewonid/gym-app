@@ -8,7 +8,7 @@ const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
-  console.log(bodyPart)
+  // console.log(bodyPart)
   return (
     <>
       <div ref={ref} className='bodyParts'>
