@@ -546,6 +546,25 @@ p {
     color: #3282B8;
     transform: scale(1.1);
 }
+.ExercisesList{
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    gap: 95px 75px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+}
+.ExerciseCard img{border-top: 3px solid #0087ca; }
+.ExerciseCard button{color:white; font-family: 'Inter-Regular'; width: fit-content; padding: 0.3rem; min-width: 80px; height: fit-content; min-height: 24px; border-radius: 10px; border: 0; margin-left: 1.5rem; margin-top: 1rem; background-color: #1B262C;
+text-transform: capitalize;
+}
+.ExerciseCard button:last-of-type{background-color:#0087ca;}
+.ExerciseCard p{text-transform: capitalize; font-size: 1.25rem; text-align: center; margin-top: 2rem;}
+.ExerciseCard:hover{transform: scale(1.02); transition: 0.1s;}
+.Pagination{display: flex; justify-content: center; margin-bottom: 5rem;}
+
+/* Contact page */
+.ContactWrapper{padding-top: 96px; height: 100vh;}
 
 /* Media screens */
 
@@ -572,8 +591,14 @@ p {
     .rightIntroduction {
         margin-right: 120px;
     }
+    .ExercisesList{ grid-template-columns: 320px 320px 320px; gap: 95px 75px;}
 }
 
+/* 1358px */
+@media screen and (max-width: 1358px) {
+    .ExercisesList{ grid-template-columns: 320px 320px; gap: 95px 5px;}
+    .ExerciseCard img{width: 280px; }
+}
 /* 1200px */
 
 @media screen and (max-width: 1200px) {
@@ -604,6 +629,10 @@ p {
         width: 320px;
         height: 740px;
         border-radius: 60px;
+    }
+    #form input{width: 70%;}
+    .bodyPart{
+        margin-left: 2rem;
     }
 }
 
@@ -758,6 +787,11 @@ p {
     .FooterColumn p {
         margin-bottom: 0.8rem;
     }
+    .ExercisesList{ grid-template-columns: 320px; gap: 95px 0px;}
+    .ExerciseCard img{width: 320px; }
+    #form{width: 100%;}
+    #form input{width: 100%; border-radius: 10px;}
+    #form button{width: 100%; border-radius: 10px; margin-top: 1rem;}
 }
 
 @media screen and (max-width:650px) {
@@ -820,6 +854,8 @@ p {
     .ExercisesText {
         margin-top: 2rem;
     }
+    .ExercisesList{ grid-template-columns: 280px; gap: 95px 0px;}
+    .ExerciseCard img{width: 280px; }
 }
 
 /* if lower than 600px in height */

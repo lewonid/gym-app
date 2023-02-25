@@ -4,7 +4,8 @@ import ExerciseDetail from "./Exercises";
 import { FaChalkboardTeacher } from "react-icons/fa"
 import { FaHandHoldingHeart } from "react-icons/fa"
 import { SlDiamond } from "react-icons/sl"
-import { BiArea } from "react-icons/bi"
+import { BiArea, BiBook } from "react-icons/bi"
+import { CgGym } from 'react-icons/cg'
 import { useEffect } from "react";
 
 const Home = () => {
@@ -82,17 +83,17 @@ const Home = () => {
             </div>
             </div>
             <div className="IntroductionBox">
-            <div className="circleBackground"><span className="box-icon"><BiArea /></span></div>
+            <div className="circleBackground"><span className="box-icon"><CgGym /></span></div>
             <div className="BoxText">
-              <h2>Surface</h2>
-              <p>Total surface of over 12.000 m/sq.</p>
+              <h2>Premium Fitness Equipment </h2>
+              <p>Powered by FPEQ.</p>
             </div>
             </div> 
             <div className="IntroductionBox">
-            <div className="circleBackground"><span className="box-icon"><BiArea /></span></div>
+            <div className="circleBackground"><span className="box-icon"><BiBook /></span></div>
             <div className="BoxText">
-              <h2>Surface</h2>
-              <p>Total surface of over 12.000 m/sq.</p>
+              <h2>Monthly Discounts</h2>
+              <p>Special offers.</p>
             </div>
             </div>
             <button>Contact Us</button>      
