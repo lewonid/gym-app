@@ -7,6 +7,7 @@ import { SlDiamond } from "react-icons/sl"
 import { BiArea, BiBook } from "react-icons/bi"
 import { CgGym } from 'react-icons/cg'
 import { useEffect } from "react";
+import Contact from "./Contact";
 
 const Home = () => {
   useEffect(() => {
@@ -29,7 +30,6 @@ const Home = () => {
             Eat, Train <br></br> & Repeat
           </h1>
           <p>Check out the most effective excercises personalized to you.</p>
-          {/* <button>Explore Exercises</button> */}
           <Link
             style={{ textDecoration: "none" }}
             to="/exercises"
@@ -96,7 +96,13 @@ const Home = () => {
               <p>Special offers.</p>
             </div>
             </div>
-            <button>Contact Us</button>      
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/contact"
+              element={<Contact />}
+            >
+              <button>Contact Us</button>
+            </Link>     
         </div>
         <div className="rightIntroduction">
           <div className="introduction-img"></div>

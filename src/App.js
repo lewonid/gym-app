@@ -12,14 +12,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/exercise/:id" element={<Exercises />} />
-        </Routes> */}
-      {/* <Home></Home> */}
-      {/* 
-        <Exercises></Exercises>
-        <Footer />   */}
       <ScrollToTop />
       <Routes>
         <Route path='/' element={<Home />} />
