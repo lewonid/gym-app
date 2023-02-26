@@ -13,7 +13,6 @@ const Exercises = () => {
   useEffect(() => {
     const fetchExercisesData = async () => {
       const bodyPartsData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-      // const bodyPartsData = await fetchData('https://some-random-api.ml/animal/cat', exerciseOptions);
 
       setBodyParts(['all', ...bodyPartsData]);
     }
@@ -24,7 +23,6 @@ const Exercises = () => {
   const handleSearch = async () => {
     if (search) {
       const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-      // const exercisesData = await fetchData('https://some-random-api.ml/animal/cat', exerciseOptions);
 
       const searchedExercises = exercisesData.filter(
         (exercise) => exercise.name.toLowerCase().includes(search)
