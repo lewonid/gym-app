@@ -32,6 +32,7 @@ const Exercises = () => {
       )
       setSearch('');
       setExercises(searchedExercises);
+      window.scrollTo({ top: '1050', behavior: 'smooth' });
     };
   }
 
@@ -39,16 +40,17 @@ const Exercises = () => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
-      if(bodyPart === 'all'){
+      if (bodyPart === 'all') {
         exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
       } else {
         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
+        window.scrollTo({ top: '1150', behavior: 'smooth' });
       }
       setExercises(exercisesData);
     }
     fetchExercisesData();
-  }, [bodyPart])
-  
+  }, [bodyPart]);
+
 
   return (
     <div className='ExercisesWrapper'>
@@ -67,10 +69,17 @@ const Exercises = () => {
       <div className='ExercisesContent'>
         <form id='form'>
           <input
-            type="text"
+            type='text'
+            // name='searchBox'
             value={search}
             placeholder="Search Exercises"
             onChange={e => setSearch(e.target.value.toLowerCase())}
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                handleSearch();
+              }
+            }}
           />
           <button onClick={handleSearch} type='button'>
             Search
@@ -78,7 +87,6 @@ const Exercises = () => {
         </form>
         <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
         <ExercisesList exercises={exercises} setExercises={setExercises} bodyPart={bodyPart} />
-       
       </div>
     </div>
   )
