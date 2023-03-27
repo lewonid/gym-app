@@ -44,6 +44,7 @@
     position: fixed;
     padding-top: 1rem;
     width: 100%;
+    z-index: 9999 !important;
 }
 
 .Navbar {
@@ -52,7 +53,6 @@
     height: 80px;
     align-items: center;
     padding-bottom: 1rem;
-    z-index: 9999 !important;
 }
 
 .Navbar img {
@@ -534,7 +534,7 @@ p {
 }
 
 
-.ExercisesList{
+.ExercisesList {
     display: grid;
     grid-template-columns: 360px 360px 360px;
     gap: 95px 75px;
@@ -542,27 +542,111 @@ p {
     margin-bottom: 4rem;
     justify-content: center;
 }
-.ExerciseCard img{border-top: 3px solid #0087ca; }
-.ExerciseCard button{color:white; font-family: 'Inter-Regular'; width: fit-content; padding: 0.3rem; min-width: 80px; height: fit-content; min-height: 24px; border-radius: 10px; border: 0; margin-left: 1.5rem; margin-top: 1rem; background-color: #1B262C;
-text-transform: capitalize;
-}
-.ExerciseCard button:last-of-type{background-color:#0087ca;}
-.ExerciseCard p{text-transform: capitalize; font-size: 1.25rem; text-align: center; margin-top: 2rem;}
 
-.Pagination{display: flex; justify-content: center; margin-bottom: 5rem;}
+.ExerciseCard img {
+    border-top: 3px solid #0087ca;
+}
+
+.ExerciseCard button {
+    color: white;
+    font-family: 'Inter-Regular';
+    width: fit-content;
+    padding: 0.3rem;
+    min-width: 80px;
+    height: fit-content;
+    min-height: 24px;
+    border-radius: 10px;
+    border: 0;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    background-color: #1B262C;
+    text-transform: capitalize;
+}
+
+.ExerciseCard button:last-of-type {
+    background-color: #0087ca;
+}
+
+.ExerciseCard p {
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.Pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
 
 /* Contact page */
-.ContactWrapper{padding-top: 200px; display: flex; flex-direction: column;}
-.ContactHeader{display: flex; justify-content: space-around; margin: 0 auto; max-width: 1600px; width: 100%;}
-.ContactCard{display: flex; flex-direction:column; font-family: 'Inter-Regular'; color: #1B262C; margin: 0 auto; cursor: pointer; align-items: center;}
-.ContactCard h2{font-size: 1rem; margin-bottom: 0.4rem;}
-.ContactCard p{font-size: 0.9rem; margin-bottom: 0.4rem;}
-.ContactCard .h-line{margin-top: 1.25rem;}
-.ContactContent{display: flex; flex-direction: column; margin: 0 auto; margin-top: 4rem; margin-bottom: 8rem; text-align: center;}
-.ContactContent h1{margin-bottom: 2rem;}
-.ContactContent .h-line{align-self: center;}
-#contactForm{display: flex; flex-direction: column; width: 700px;}
-#contactForm input{background-color: #1B262C; border-radius: 10px; height: 46px; color: white;
+.ContactWrapper {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactHeader {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.ContactCard {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter-Regular';
+    color: #1B262C;
+    margin: 0 auto;
+    cursor: pointer;
+    align-items: center;
+}
+
+.ContactCard h2 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.ContactCard p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.ContactCard .h-line {
+    margin-top: 1.25rem;
+}
+
+.ContactContent {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.ContactContent h1 {
+    margin-bottom: 2rem;
+}
+
+.ContactContent .h-line {
+    align-self: center;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+
+#contactForm input {
+    background-color: #1B262C;
+    border-radius: 10px;
+    height: 46px;
+    color: white;
     font-family: 'Inter-Regular';
     font-size: 1rem;
     padding-left: 2.5rem;
@@ -570,8 +654,13 @@ text-transform: capitalize;
     outline: none;
     margin-bottom: 2rem;
 }
-#contactForm p{margin-bottom: 0.6rem;}
-#contactButton{background-color: #3282B8;
+
+#contactForm p {
+    margin-bottom: 0.6rem;
+}
+
+#contactButton {
+    background-color: #3282B8;
     color: rgb(228, 228, 228);
     font-family: 'Inter-Regular';
     font-size: 1rem;
@@ -581,6 +670,7 @@ text-transform: capitalize;
     cursor: pointer;
     border-radius: 10px;
 }
+
 /* Media screens */
 
 
@@ -606,21 +696,48 @@ text-transform: capitalize;
     .rightIntroduction {
         margin-right: 120px;
     }
-    .ExercisesList{ grid-template-columns: 320px 320px 320px; gap: 95px 75px;}
+
+    .ExercisesList {
+        grid-template-columns: 320px 320px 320px;
+        gap: 95px 75px;
+    }
 }
 
 /* 1358px */
 @media screen and (max-width: 1358px) {
-    .ExercisesList{ grid-template-columns: 320px 320px; gap: 95px 5px;}
-    .ExerciseCard img{width: 280px; }   
+    .ExercisesList {
+        grid-template-columns: 320px 320px;
+        gap: 95px 5px;
+    }
+
+    .ExerciseCard img {
+        width: 280px;
+    }
 }
+
 /* if bigger than 1358 => apply transform scale hover effects */
 @media screen and (min-width:1358px) {
-    .navLink:hover {color: #3282B8;transform: scale(1.03);}
-    .bodyPart:hover {border: #0087ca solid 2px;transform: scale(1.03);}
-    #arrow:hover {color: #3282B8;transform: scale(1.1);}
-    .ExerciseCard:hover{transform: scale(1.02); transition: 0.1s;}
+    .navLink:hover {
+        color: #3282B8;
+        transform: scale(1.03);
+    }
+
+    .bodyPart:hover {
+        border: #0087ca solid 2px;
+        transform: scale(1.03);
+    }
+
+    #arrow:hover {
+        color: #3282B8;
+        transform: scale(1.1);
+    }
+
+    .ExerciseCard:hover {
+        transform: scale(1.02);
+        transition: 0.1s;
+    }
 }
+
 /*  */
 /* 1200px */
 
@@ -653,8 +770,12 @@ text-transform: capitalize;
         height: 740px;
         border-radius: 60px;
     }
-    #form input{width: 70%;}
-    .bodyPart{
+
+    #form input {
+        width: 70%;
+    }
+
+    .bodyPart {
         margin-left: 2rem;
     }
 }
@@ -810,15 +931,48 @@ text-transform: capitalize;
     .FooterColumn p {
         margin-bottom: 0.8rem;
     }
-    .ExercisesList{ grid-template-columns: 320px; gap: 95px 0px;}
-    .ExerciseCard img{width: 320px; }
-    #form{width: 100%;}
-    #form input{width: 100%; border-radius: 10px;}
-    #form button{width: 100%; border-radius: 10px; margin-top: 1rem;}
-    .ContactWrapper{padding-top: 128px;}
-    .ContactHeader{flex-direction: column;}
-    .ContactContent{margin-left: 2rem; margin-right: 2rem;}
-    #contactForm, #contactButton{width: auto;}
+
+    .ExercisesList {
+        grid-template-columns: 320px;
+        gap: 95px 0px;
+    }
+
+    .ExerciseCard img {
+        width: 320px;
+    }
+
+    #form {
+        width: 100%;
+    }
+
+    #form input {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #form button {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .ContactWrapper {
+        padding-top: 128px;
+    }
+
+    .ContactHeader {
+        flex-direction: column;
+    }
+
+    .ContactContent {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    #contactForm,
+    #contactButton {
+        width: auto;
+    }
 }
 
 @media screen and (max-width:650px) {
@@ -881,8 +1035,15 @@ text-transform: capitalize;
     .ExercisesText {
         margin-top: 2rem;
     }
-    .ExercisesList{ grid-template-columns: 280px; gap: 95px 0px;}
-    .ExerciseCard img{width: 280px; }
+
+    .ExercisesList {
+        grid-template-columns: 280px;
+        gap: 95px 0px;
+    }
+
+    .ExerciseCard img {
+        width: 280px;
+    }
 }
 
 /* if lower than 600px in height */
