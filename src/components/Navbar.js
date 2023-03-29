@@ -9,18 +9,18 @@ import { useScrollPosition } from '../hooks/useScrollPosition'
 import { useRef } from 'react'
 
 const Navbar = () => {
-  
+
   const navRef = useRef(0);
   const desktopNavDiv = navRef.current;
   const scrollPosition = useScrollPosition()
 
-  if (scrollPosition > 10){
-    if (desktopNavDiv.className !== "scrolled-navbar-class"){
+  if (scrollPosition > 10) {
+    if (desktopNavDiv.className !== "scrolled-navbar-class") {
       desktopNavDiv.className = "scrolled-navbar-class";
       // console.log("added")
     }
-  }else{
-    if (desktopNavDiv.className === "scrolled-navbar-class"){
+  } else {
+    if (desktopNavDiv.className === "scrolled-navbar-class") {
       desktopNavDiv.className = "un-scrolled-navbar-class";
       // console.log("unAdded")
     }
@@ -49,20 +49,17 @@ const Navbar = () => {
     <>
       <div className='Mobile-Menu-Buttons' id='mobile'>
         <NavLink onClick={buttonClicked} className='mobile-button' to="/" element={<Home />}><h3>Home</h3></NavLink>
-        <NavLink onClick={buttonClicked} className='mobile-button' to="/exercises" element={<ExerciseDetail />}><h3>Exercises</h3></NavLink>        
-        <NavLink onClick={buttonClicked} className='mobile-button' to="/contact" element={<Contact />}><h3>Contact</h3></NavLink>  
+        <NavLink onClick={buttonClicked} className='mobile-button' to="/exercises" element={<ExerciseDetail />}><h3>Exercises</h3></NavLink>
+        <NavLink onClick={buttonClicked} className='mobile-button' to="/contact" element={<Contact />}><h3>Contact</h3></NavLink>
       </div>
       <div ref={navRef} id='Desktop-Buttons' className='Desktop-Buttons'>
         <div className='Navbar'>
           <NavLink to='/' element={<Home />}><img src={logo} alt='gym logo'></img> </NavLink>
           <div className='NavLinks'>
             <h1 onClick={mobileMenu} className='HamburgerMenuMobile'><RxHamburgerMenu /></h1>
-            {/* <Link style={{textDecoration: 'none'}} to="/" element={<Home />}><h3 className='navLink'>Home<div className='active'></div></h3> </Link>
-            <Link style={{textDecoration: 'none'}} to="/exercises" element={<ExerciseDetail />}><h3 className='navLink'>Exercises</h3></Link>
-            <h3 className='navLink'>Contact</h3> */}
-            <NavLink style={{textDecoration: 'none'}} to="/" element={<Home />}><h3 className='navLink'>Home</h3><div className='activated'></div></NavLink>
-            <NavLink style={{textDecoration: 'none'}} to="/exercises" element={<ExerciseDetail />}><h3 className='navLink'>Exercises</h3><div className='activated'></div></NavLink>
-            <NavLink style={{textDecoration: 'none'}} to="/contact" element={<Contact />}><h3 className='navLink'>Contact</h3><div className='activated'></div></NavLink>
+            <NavLink style={{ textDecoration: 'none' }} to="/" element={<Home />}><h3 className='navLink'>Home</h3><div className='activated'></div></NavLink>
+            <NavLink style={{ textDecoration: 'none' }} to="/exercises" element={<ExerciseDetail />}><h3 className='navLink'>Exercises</h3><div className='activated'></div></NavLink>
+            <NavLink style={{ textDecoration: 'none' }} to="/contact" element={<Contact />}><h3 className='navLink'>Contact</h3><div className='activated'></div></NavLink>
           </div>
         </div>
       </div>

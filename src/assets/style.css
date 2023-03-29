@@ -32,6 +32,12 @@
     /* padding-top: 1rem; */
 }
 
+.PageNotFound {
+    padding-top: 96px;
+    text-align: center;
+    margin-bottom: 200px
+}
+
 /* Navbar */
 
 .scrolled-navbar-class {
@@ -579,6 +585,13 @@ p {
     justify-content: center;
     margin-bottom: 5rem;
 }
+
+/* ExerciseDetail page */
+.ExerciseDetailWrapper {
+    padding-top: 96px;
+    /* needed to hold the empty space that comes from the position: fixed at NavBar */
+}
+
 
 /* Contact page */
 .ContactWrapper {
