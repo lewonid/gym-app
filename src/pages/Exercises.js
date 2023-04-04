@@ -85,7 +85,7 @@ const Exercises = () => {
             Search
           </button>
         </form>
-        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} isBodyParts />
         <ExercisesList exercises={exercises} setExercises={setExercises} bodyPart={bodyPart} />
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { CgGym } from 'react-icons/cg'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 
-const HorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
+const HorizontalScrollbar = ({ data, bodyPart, setBodyPart, isBodyParts }) => {
 
   const ref = useRef(null);
   const scroll = (scrollOffset) => {

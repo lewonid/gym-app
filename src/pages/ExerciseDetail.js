@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Detail from '../components/Detail';
-import SimilarExercises from '../components/SimilarExercises';
 
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 
@@ -17,6 +16,7 @@ const ExerciseDetail = () => {
             const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions);
             setExerciseDetail(exerciseDetailData);
             // console.log(exerciseDetailData);
+
         }
 
         fetchExercisesData();
@@ -25,9 +25,7 @@ const ExerciseDetail = () => {
 
     return (
         <div className='ExerciseDetailWrapper'>
-            IN WORK.
             <Detail exerciseDetail={exerciseDetail} />
-            <SimilarExercises />
         </div>
     )
 }
